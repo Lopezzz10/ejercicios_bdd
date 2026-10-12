@@ -8,6 +8,8 @@ CREATE TABLE estudiantes (
 	CONSTRAINT estudiantes_pk PRIMARY KEY (id_estudiante)
 );
 
+--INSERCION DE DATOS
+
 INSERT INTO estudiantes VALUES (1, 'Juan', 'Perez', 20, 'Programacion', '2026-01-10');
 INSERT INTO estudiantes VALUES (2, 'Maria', 'Lopez', 22, 'Base de Datos', '2026-01-12');
 INSERT INTO estudiantes VALUES (3, 'Carlos', 'Mora', 19, 'Matematicas', '2026-01-15');
@@ -25,6 +27,8 @@ INSERT INTO estudiantes VALUES (14, 'Ana', 'Torres', 21, 'Estructura de Datos', 
 INSERT INTO estudiantes VALUES (15, 'Luis', 'Garcia', 24, 'Base de Datos', '2026-04-15');
 INSERT INTO estudiantes VALUES (16, 'Sofia', 'Ramirez', 18, 'Matematicas', '2026-05-11');
 
+--CONSULTAS 
+
 SELECT * FROM estudiantes;
 
 SELECT nombres, curso FROM estudiantes;
@@ -38,3 +42,19 @@ SELECT * FROM estudiantes WHERE curso = 'Base de Datos';
 SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
 
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
+
+--UPDATE
+
+UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante = 1;
+
+UPDATE estudiantes SET edad = 23 WHERE id_estudiante = 3;
+
+UPDATE estudiantes SET fecha_registro = '2026-06-01' WHERE id_estudiante = 5;
+
+UPDATE estudiantes SET curso = 'Ciberseguridad', edad = 26 WHERE id_estudiante = 9;
+
+UPDATE estudiantes SET apellidos = 'Morales', fecha_registro = '2026-05-20' WHERE id_estudiante = 10;
+
+UPDATE estudiantes SET curso = 'Bases de Datos Avanzadas' WHERE curso = 'Redes';
+
+UPDATE estudiantes SET edad = edad + 1 WHERE curso = 'Matematicas';
