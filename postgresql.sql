@@ -74,3 +74,8 @@ DELETE FROM estudiantes WHERE nombres = 'Valeria' AND apellidos = 'Castro';
 DELETE FROM estudiantes WHERE fecha_registro < '2026-02-01';
 
 DELETE FROM estudiantes WHERE curso = 'Estructura de Datos' AND edad > 22;
+
+--MODIFICACION DE LA TABLA
+
+ALTER TABLE estudiantes
+ADD COLUMN correo VARCHAR(100);
