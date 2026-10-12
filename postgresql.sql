@@ -24,3 +24,17 @@ INSERT INTO estudiantes VALUES (13, 'Carlos', 'Mora', 19, 'Programacion', '2026-
 INSERT INTO estudiantes VALUES (14, 'Ana', 'Torres', 21, 'Estructura de Datos', '2026-04-09');
 INSERT INTO estudiantes VALUES (15, 'Luis', 'Garcia', 24, 'Base de Datos', '2026-04-15');
 INSERT INTO estudiantes VALUES (16, 'Sofia', 'Ramirez', 18, 'Matematicas', '2026-05-11');
+
+SELECT * FROM estudiantes;
+
+SELECT nombres, curso FROM estudiantes;
+
+SELECT * FROM estudiantes WHERE edad > 18;
+
+SELECT * FROM estudiantes WHERE edad BETWEEN 18 AND 25;
+
+SELECT * FROM estudiantes WHERE curso = 'Base de Datos';
+
+SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
+
+SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
