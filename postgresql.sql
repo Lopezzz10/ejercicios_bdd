@@ -58,3 +58,19 @@ UPDATE estudiantes SET apellidos = 'Morales', fecha_registro = '2026-05-20' WHER
 UPDATE estudiantes SET curso = 'Bases de Datos Avanzadas' WHERE curso = 'Redes';
 
 UPDATE estudiantes SET edad = edad + 1 WHERE curso = 'Matematicas';
+
+--DELETE
+
+DELETE FROM estudiantes WHERE id_estudiante = 16;
+
+DELETE FROM estudiantes WHERE curso = 'Sistemas Operativos';
+
+DELETE FROM estudiantes WHERE edad = 24;
+
+DELETE FROM estudiantes WHERE fecha_registro = '2026-03-11';
+
+DELETE FROM estudiantes WHERE nombres = 'Valeria' AND apellidos = 'Castro';
+
+DELETE FROM estudiantes WHERE fecha_registro < '2026-02-01';
+
+DELETE FROM estudiantes WHERE curso = 'Estructura de Datos' AND edad > 22;
