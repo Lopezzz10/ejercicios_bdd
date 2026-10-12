@@ -1,6 +1,9 @@
 CREATE DATABASE IF NOT EXISTS ejercicios_bdd;
 USE ejercicios_bdd;
 
+#Parte 10, en MySQL se usa IF EXISTS para evitar error si la tabla no existe
+DROP TABLE IF EXISTS estudiantes;
+
 # CREAR TABLA
 
 CREATE TABLE estudiantes (
@@ -97,7 +100,7 @@ INSERT INTO estudiantes VALUES (6, 'Sofia', 'Ramirez', 18, 'Programacion', '2026
 INSERT INTO estudiantes VALUES (7, 'Diego', 'Vera', 23, 'Sistemas Operativos', '2026-02-20', 'diego@gmail.com');
 INSERT INTO estudiantes VALUES (8, 'Valeria', 'Castro', 20, 'Base de Datos', '2026-03-01', 'valeria@gmail.com');
 INSERT INTO estudiantes VALUES (9, 'Andres', 'Salazar', 25, 'Estructura de Datos', '2026-03-05', 'andres@gmail.com');
-INSERT INTO estudiantes VALUES (10, 'Camila', 'Ortiz', 19, 'Matematicas', '2026-03-11', 'camila@gmail.com');
+INSERT INTO estudiantes VALUES (10, 'Camila', 'Ortiz', 19, 'Matematicas', '2026-03-15', 'camila@gmail.com');
 INSERT INTO estudiantes VALUES (11, 'Juan', 'Perez', 20, 'Base de Datos', '2026-03-18', 'juan@gmail.com');
 INSERT INTO estudiantes VALUES (12, 'Maria', 'Lopez', 22, 'Redes', '2026-03-22', 'maria@gmail.com');
 INSERT INTO estudiantes VALUES (13, 'Carlos', 'Mora', 19, 'Programacion', '2026-04-02', 'carlos@gmail.com');
@@ -109,7 +112,7 @@ UPDATE estudiantes SET correo = 'juan.perez@gmail.com' WHERE id_estudiante = 1;
 UPDATE estudiantes SET correo = 'maria.lopez@outlook.com', edad = 23 WHERE id_estudiante = 2;
 UPDATE estudiantes SET curso = 'Inteligencia Artificial', correo = 'ana.torres@gmail.com' WHERE id_estudiante = 4;
 UPDATE estudiantes SET correo = 'luis.garcia@hotmail.com' WHERE nombres = 'Luis' AND apellidos = 'Garcia';
-UPDATE estudiantes SET correo = 'pedro@gmail.com' WHERE id_estudiante = 7;
+UPDATE estudiantes SET correo = 'diego.vera@gmail.com' WHERE id_estudiante = 7;
 
 SELECT * FROM estudiantes;
 SELECT nombres, apellidos, correo FROM estudiantes;
